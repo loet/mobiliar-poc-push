@@ -1,0 +1,16 @@
+{
+  "name": "mobiliar-appseed",
+  "private": "true",
+  "devDependencies": {},
+  "dependencies": {
+    "ionic": "driftyco/ionic-bower#1.2.4",
+    "ngCordova": "~0.1.23-alpha",
+    "angular-google-maps": "~2.3.0",
+    "lodash": "3.10.1",
+    "moment": "~2.11.2",
+    "sjcl": "^1.0.3",
+    "mobiliar-app-utils": "https://github.com/loet/mobiliar-app-utils.git#1.2.6",
+    "mobiliar-app-assistance": "https://github.com/loet/mobiliar-app-assistance.git#1.0.4",
+    "mobiliar-app-impressum": "https://github.com/loet/mobiliar-app-impressum.git#1.0.2"
+  }
+}

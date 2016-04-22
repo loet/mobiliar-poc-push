@@ -1,0 +1,17 @@
+{
+  "name": "mobiliar-appseed",
+  "app_id": "ch.mobiliar.AppSeed",
+  "browsers": [
+    {
+      "platform": "android",
+      "browser": "crosswalk",
+      "version": "12.41.296.5"
+    }
+  ],
+  "watchPatterns": [
+      "www/lib/*.js",
+      "www/lib/*.css",
+      "www/translations/translations.json",
+      "www/index.html"
+    ]
+}

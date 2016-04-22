@@ -1,0 +1,8 @@
+/platforms
+/plugins
+/tmp
+/www
+/node_modules
+/bower_components
+.idea
+**/.DS_Store

@@ -1,0 +1,60 @@
+<ion-view>
+
+    <ion-header-bar class="bar-light" ng-class="{'ios': baseCtrl.isIOS}">
+        <img class="logo" ng-class="{'ios': baseCtrl.isIOS}" ng-src="img/mobi_logo_{{indexCtrl.language}}.svg">
+
+        <h1 class="title">&nbsp;</h1>
+
+        <div class="buttons" ng-class="{'ios': baseCtrl.isIOS}">
+            <button class="button-icon" style="width:80px;" ng-click="indexCtrl.openImpressum()">
+                <img src="img/mob_ico_info@1x.svg" style="width: 30px; height: 30px">
+            </button>
+        </div>
+    </ion-header-bar>
+
+    <ion-content>
+
+        <div class="index-menu-title grey-screen" ng-click="indexCtrl.showPictureActions()">
+            <h1>{{'appseed.title' | translateStateful}}</h1>
+        </div>
+
+        <div class="index-menu">
+            <div class="index-menu-row">
+                <div class="index-menu-col top-left"
+                     ng-click="indexCtrl.goToAssistance()">
+                    <div class="index-menu-content">
+                        <img src="img/mob_ico_phone@1x.svg"/>
+
+                        <p class="overview-label">{{'assistance' | translateStateful}}</p>
+                    </div>
+                </div>
+                <div class="index-menu-col top-right">
+                    <div class="index-menu-content">
+                        <img src="img/mob_ico_plus_grey@1x.svg">
+
+                        <p class="overview-label">TBD</p>
+                    </div>
+                </div>
+            </div>
+            <div class="index-menu-row">
+                <div class="index-menu-col bottom-left">
+                    <div class="index-menu-content">
+                        <img src="img/mob_ico_plus_grey@1x.svg">
+
+                        <p class="overview-label">TBD</p>
+                    </div>
+                </div>
+                <div class="index-menu-col">
+                    <div class="index-menu-content">
+                        <img src="img/mob_ico_plus_grey@1x.svg"/>
+
+                        <p class="overview-label">TBD</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+
+
+</ion-view>
