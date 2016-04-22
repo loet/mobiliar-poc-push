@@ -33,7 +33,7 @@ node/npm, bower, cordova, ionic sind installiert.
 
 ## Gerät
 ### iOS
-* register device in Apple Developer Console
+* Make first deployment on device in XCode (or register device in Apple Developer Console)
 * connect device via USB to Mac
 * ionic run ios --device
 ### Android
