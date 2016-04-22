@@ -33,12 +33,13 @@
       "add",
       "cordova-plugin-device",
       "cordova-plugin-geolocation",
+      "cordova-plugin-globalization",
       "cordova-plugin-console",
       "cordova-plugin-whitelist",
       "cordova-plugin-splashscreen",
       "cordova-plugin-statusbar",
       "ionic-plugin-keyboard",
-      "https://github.com/wymsee/cordova-imagePicker.git",
+      "cordova-plugin-image-picker",
       "cordova-plugin-media",
       "cordova-plugin-media-capture",
       "cordova-plugin-camera",
@@ -49,7 +50,7 @@
       "cordova-plugin-actionsheet",
       "cordova-plugin-statusbar",
       "cordova-plugin-file-transfer",
-      "https://github.com/katzer/cordova-plugin-email-composer.git",
+      "cordova-plugin-email-composer",
       "cordova-plugin-google-analytics",
       "cordova-plugin-datepicker"
     ]
