@@ -4,8 +4,6 @@ angular.module('mobiliar-app', [
     'uiGmapgoogle-maps',
 
     'mobiliar-app.utils',
-    'mobiliar-app.assistance',
-    'mobiliar-app.impressum',
 
     'mobiliar-app.index',
 

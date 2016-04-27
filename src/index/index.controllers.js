@@ -8,14 +8,6 @@ angular.module('mobiliar-app.index.controllers', [])
             ctrl.language = LocaleService.getLanguage();
         });
 
-        ctrl.goToAssistance = function () {
-            NavigationService.navigate('assistance');
-        };
-
-        ctrl.openImpressum = function () {
-            NavigationService.navigate('/impressum-' + LocaleService.getLanguage());
-        };
-
     })
 
 

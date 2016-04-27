@@ -22,7 +22,7 @@ module.exports = function (grunt) {
     app = 'www/lib/app.js';
     app_css = 'www/lib/app.css';
     libraries = 'www/lib/libaries.js';
-    mobiliar_libraries = 'www/lib/mobiliar-libaries.js';
+    mobiliar_libraries = 'www/lib/mobiliar-libraries.js';
 
     grunt.config.merge({
             pkg: pkg,
@@ -94,7 +94,7 @@ module.exports = function (grunt) {
 
             copy: {
                 index: {
-                    src: 'src/app.html',
+                    src: 'src/index.html',
                     dest: 'www/index.html'
                 },
                 ionic_fonts: {
