@@ -1,6 +1,5 @@
 {
-  "name": "mobiliar-appseed",
-  "app_id": "ch.mobiliar.AppSeed",
+  "name": "mobiliar-poc-push",
   "browsers": [
     {
       "platform": "android",
@@ -9,9 +8,10 @@
     }
   ],
   "watchPatterns": [
-      "www/lib/*.js",
-      "www/lib/*.css",
-      "www/translations/translations.json",
-      "www/index.html"
-    ]
+    "www/lib/*.js",
+    "www/lib/*.css",
+    "www/translations/translations.json",
+    "www/index.html"
+  ],
+  "app_id": "d6805728"
 }

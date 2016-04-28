@@ -16,4 +16,24 @@ angular.module('mobiliar-app.run', [])
 
 
         });
-    });
+    })
+
+    .run(function ($ionicPlatform, NotificationStore) {
+        $ionicPlatform.ready(function () {
+            var push = new Ionic.Push({
+                "debug": true,
+                "onNotification": function (notification) {
+                    var payload = notification.payload;
+                    console.log(notification, payload);
+                    NotificationStore.addNotification(notification);
+                }
+            });
+
+            push.register(function (token) {
+                NotificationStore.setDevice(token.token);
+                console.log("Device token:", token.token);
+            });
+
+        });
+    })
+;

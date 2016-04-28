@@ -8,6 +8,10 @@ angular.module('mobiliar-app.index.controllers', [])
             ctrl.language = LocaleService.getLanguage();
         });
 
+        ctrl.goToNotifications = function () {
+            NavigationService.navigate('/notifications');
+        };
+
     })
 
 

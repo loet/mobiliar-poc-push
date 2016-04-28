@@ -1,7 +1,6 @@
 module.exports.config = {
 
     bower_components: [
-        'bower_components/ionic/js/ionic.bundle.js',
         'bower_components/ngCordova/dist/ng-cordova.js',
         'bower_components/lodash/lodash.js',
         'bower_components/moment/moment.js',

@@ -114,6 +114,14 @@ module.exports = function (grunt) {
                     cwd: 'bower_components/mobiliar-app-utils/img',
                     src: '**',
                     dest: 'www/img'
+                },
+                ionic: {
+                    src: 'bower_components/ionic/js/ionic.bundle.min.js',
+                    dest: 'www/lib/ionic.bundle.min.js'
+                },
+                ionic_webclient: {
+                    src: 'bower_components/ionic-platform-web-client/dist/ionic.io.bundle.min.js',
+                    dest: 'www/lib/ionic.io.bundle.min.js'
                 }
             },
 
@@ -209,7 +217,7 @@ module.exports = function (grunt) {
     );
 
 //grunt.registerTask('default', ['clean', 'html2js', 'replace:templates', 'concat:dist']);
-    grunt.registerTask('default', ['clean', 'copy:index', 'html2js', 'replace:templates', 'concat:dist', 'concat:libs', 'concat:mobiliar_libs', 'concat_css', 'json_merge', 'copy:ionic_fonts', 'copy:mobiliar_fonts', 'copy:images']);
+    grunt.registerTask('default', ['clean', 'copy:index', 'html2js', 'replace:templates', 'concat:dist', 'concat:libs', 'concat:mobiliar_libs', 'concat_css', 'json_merge', 'copy:ionic_fonts', 'copy:mobiliar_fonts', 'copy:images', 'copy:ionic', 'copy:ionic_webclient']);
 
 //grunt.registerTask('test', 'Run karma unit tests', [
 //    'html2js', 'replace:templates', 'concat:dist'/*, 'karma:test'*/

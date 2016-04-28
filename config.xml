@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="ch.mobiliar.AppSeed" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="ch.mobiliar.PocPush" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Mobiliar App Seed</name>
   <description>
         Mobiliar App Seed
@@ -20,6 +20,8 @@
   <access origin="https://www.mobiliar.ch"/>
   <access origin="https://www.mobiliere.ch"/>
   <access origin="https://www.mobiliare.ch"/>
+  <access origin="https://api.ionic.io/push/development"/>
+  <access origin="https://api.ionic.io/push/notifications"/>
   <access origin="tel:*" launch-external="yes"/>
   <access origin="mailto:*" launch-external="yes"/>
   <preference name="webviewbounce" value="false"/>
