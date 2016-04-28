@@ -26,7 +26,7 @@ angular.module('mobilliar-app.notifications.integrationservices', [])
         }
     })
 
-    .factory('NotificationService', function (NotificationStore) {
+    .factory('NotificationService', function (NotificationStore, $cordovaBadge) {
         return {
             register: register
         };
@@ -38,6 +38,19 @@ angular.module('mobilliar-app.notifications.integrationservices', [])
                     var payload = notification.payload;
                     console.log(notification, payload);
                     NotificationStore.addNotification(notification);
+                    notification.setApplicationIconBadgeNumber(NotificationStore.getNotifications().length);
+                    //$cordovaBadge.set(NotificationStore.getNotifications().length).then(function () {
+                    //    console.log('set badge');
+                    //}, function (err) {
+                    //    console.error('could not set badge, ' + err);
+                    //});
+
+                },
+                "pluginConfig": {
+                    "ios": {
+                        "badge": true,
+                        "sound": true
+                    }
                 }
             });
 
