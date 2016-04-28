@@ -8,12 +8,12 @@ angular.module('mobilliar-app.notifications.services', [])
             pushTestNotification: pushTestNotification
         };
 
-        function pushTestNotification(tokens) {
+        function pushTestNotification(tokens, text) {
             var notification = {
                 "tokens": tokens,
                 "profile": "pocpushtestprofile",
                 "notification": {
-                    "message": "Hello, dies ist eine Push Notification"
+                    "message": text
                 }
             };
             $http.post('https://api.ionic.io/push/notifications', notification, config);

@@ -26,4 +26,29 @@ angular.module('mobilliar-app.notifications.integrationservices', [])
         }
     })
 
+    .factory('NotificationService', function (NotificationStore) {
+        return {
+            register: register
+        };
+
+        function register() {
+            var push = new Ionic.Push({
+                "debug": true,
+                "onNotification": function (notification) {
+                    var payload = notification.payload;
+                    console.log(notification, payload);
+                    NotificationStore.addNotification(notification);
+                }
+            });
+
+            push.register(function (token) {
+                NotificationStore.setDevice(token.token);
+                console.log("Device token:", token.token);
+            }, function (msg) {
+                console.error('Push registration failes: ' + msg);
+            });
+        }
+
+    })
+
 ;

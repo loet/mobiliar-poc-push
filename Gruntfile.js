@@ -170,7 +170,7 @@ module.exports = function (grunt) {
 
             watch: {
                 index: {
-                    files: ['src/app.html'],
+                    files: ['src/index.html'],
                     tasks: ['copy:index'],
                     options: {
                         spawn: false

@@ -14,10 +14,15 @@
 
 
     <ion-content class="mobi-form-padding">
-        <div style="margin-top: 20px;">
-            {{notificationsCtrl.device}}
-        </div>
-        <button class=" button button-assertive" ng-click="notificationsCtrl.pushTestNotification()" ng-disabled="notificationsCtrl.notificationDisabled()">Push Notification</button>
+        <input style="width: 100%; border: 1px solid black" ng-model="notificationsCtrl.devices">
+        </input>
+
+        <input style="width: 100%; border: 1px solid black" ng-model="notificationsCtrl.text">
+        </input>
+
+        <button class="button button-assertive" ng-click="notificationsCtrl.pushTestNotification()"
+                ng-disabled="notificationsCtrl.notificationDisabled()">Push Notification
+        </button>
 
         <ul>
             <li ng-repeat="notification in notificationsCtrl.notifications">{{notification.text}}</li>

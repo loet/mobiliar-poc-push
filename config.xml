@@ -22,6 +22,7 @@
   <access origin="https://www.mobiliare.ch"/>
   <access origin="https://api.ionic.io/push/development"/>
   <access origin="https://api.ionic.io/push/notifications"/>
+  <access origin="https://api.ionic.io/push/tokens/invalidate"/>
   <access origin="tel:*" launch-external="yes"/>
   <access origin="mailto:*" launch-external="yes"/>
   <preference name="webviewbounce" value="false"/>
