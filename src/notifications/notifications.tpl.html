@@ -14,19 +14,22 @@
 
 
     <ion-content class="mobi-form-padding">
-        <input style="width: 100%; border: 1px solid black" ng-model="notificationsCtrl.devices">
-        </input>
+        <div style="padding-top: 20px;padding-bottom: 20px">
+            <input value="{{notificationsCtrl.device}}">
+        </div>
 
-        <input style="width: 100%; border: 1px solid black" ng-model="notificationsCtrl.text">
-        </input>
+        <!--<input style="width: 100%; border: 1px solid black" ng-model="notificationsCtrl.text">-->
+        <!--</input>-->
 
-        <button class="button button-assertive" ng-click="notificationsCtrl.pushTestNotification()"
-                ng-disabled="notificationsCtrl.notificationDisabled()">Push Notification
-        </button>
+        <!--<button class="button button-assertive" ng-click="notificationsCtrl.pushTestNotification()"-->
+        <!--ng-disabled="notificationsCtrl.notificationDisabled()">Push Notification-->
+        <!--</button>-->
 
         <ul>
             <li ng-repeat="notification in notificationsCtrl.notifications">{{notification.text}}</li>
         </ul>
+
+        <button class="button button-assertive button-full" style="margin-top: 20px;" ng-click="notificationsCtrl.removeNotifications()">Meldungen löschen</button>
     </ion-content>
 
 

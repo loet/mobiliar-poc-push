@@ -5,6 +5,7 @@ angular.module('mobilliar-app.notifications.integrationservices', [])
         return {
             addNotification: addNotification,
             getNotifications: getNotifications,
+            removeNotifications: removeNotifications,
             setDevice: setDevice,
             getDevice: getDevice
         };
@@ -15,6 +16,10 @@ angular.module('mobilliar-app.notifications.integrationservices', [])
 
         function getDevice() {
             return _device;
+        }
+
+        function removeNotifications() {
+            _notifications = [];
         }
 
         function addNotification(notification) {
@@ -38,7 +43,7 @@ angular.module('mobilliar-app.notifications.integrationservices', [])
                     var payload = notification.payload;
                     console.log(notification, payload);
                     NotificationStore.addNotification(notification);
-                    notification.setApplicationIconBadgeNumber(NotificationStore.getNotifications().length);
+                    //notification.setApplicationIconBadgeNumber(NotificationStore.getNotifications().length);
                     //$cordovaBadge.set(NotificationStore.getNotifications().length).then(function () {
                     //    console.log('set badge');
                     //}, function (err) {
@@ -50,6 +55,9 @@ angular.module('mobilliar-app.notifications.integrationservices', [])
                     "ios": {
                         "badge": true,
                         "sound": true
+                    },
+                    "android": {
+                        "forceShow": true
                     }
                 }
             });
