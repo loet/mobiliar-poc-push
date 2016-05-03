@@ -21,5 +21,12 @@ angular.module('mobiliar-app.controllers', [])
 
     })
 
+    .controller('QuickCtrl', function (NavigationService) {
+
+       NavigationService.navigate('/notifications');
+
+
+    })
+
 
 ;

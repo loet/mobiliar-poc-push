@@ -18,7 +18,7 @@ angular.module('mobiliar-app.run', [])
         });
     })
 
-    .run(function ($ionicPlatform, NotificationService) {
+    .run(function ($ionicPlatform, NotificationService, NavigationService) {
         $ionicPlatform.ready(function () {
             NotificationService.register();
 
@@ -34,6 +34,12 @@ angular.module('mobiliar-app.run', [])
                     title: 'Berater', // mandatory
                     subtitle: 'Berater anschreiben', // optional
                     iconType: 'Mail' // optional
+                },
+                {
+                    type: 'claim', // optional, but can be used in the onHomeIconPressed callback
+                    title: 'Schaden', // mandatory
+                    subtitle: 'Schaden erfassen', // optional
+                    iconType: 'Alarm' // optional
                 }
             ]);
 
@@ -44,6 +50,8 @@ angular.module('mobiliar-app.run', [])
                     window.open('tel:0795414892', '_system');
                 } else if (payload.type == 'agent') {
                     window.open('mailto:loet@swissonline.ch', '_system');
+                } else if (payload.type == 'claim') {
+                        NavigationService.navigate('/quicknotifications');
                 } else {
                     // hook up any other icons you may have and do something awesome (e.g. launch the Camera UI, then share the image to Twitter)
                     console.log(JSON.stringify(payload));

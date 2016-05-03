@@ -12,4 +12,11 @@ angular.module('mobiliar-app.routings', [])
                 controller: 'StartCtrl as startCtrl'
             });
 
+        $stateProvider
+            .state('quicknotifications', {
+                url: '/quicknotifications',
+                controller: 'QuickCtrl as quickController'
+            });
+
+
     });
