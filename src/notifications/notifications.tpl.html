@@ -14,7 +14,23 @@
 
 
     <ion-content class="mobi-form-padding">
-        <div style="padding-top: 20px;padding-bottom: 20px">
+
+        <!--<div id="wrapper"-->
+             <!--style="margin-top: 50px; height: 100px; width: 100%; overflow: hidden; border-top: 1px solid grey; border-bottom: 1px solid grey">-->
+            <!--<div id="sutra" style="white-space: nowrap; overflow: scroll; height: 120px; padding-top: 20px;">-->
+                <!--<div style="font-size: larger;">क्लेश कर्म विपाकाअशयैःअपरामृष्टः पुरुषविशेष ईश्वरः ॥२४॥</div>-->
+                <!--<div style="font-size: smaller; margin-top: 10px">kleśa karma vipāka-āśayaiḥ-aparāmr̥ṣṭaḥ-->
+                    <!--puruṣa-viśeṣa īśvaraḥ ॥24॥-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div>-->
+            <!--<div style="float: left" ng-if="!isAtStart()"><i class="ion-ios-arrow-thin-left"></i></div>-->
+            <!--<div style="float:right" ng-if="!isAtEnd()"><i class="ion-ios-arrow-thin-right"></i></div>-->
+        <!--</div>-->
+
+
+        <div style="margin-top: 20px; width: 100%; padding-top: 20px;padding-bottom: 20px">
             <input value="{{notificationsCtrl.device}}">
         </div>
 
@@ -29,7 +45,17 @@
             <li ng-repeat="notification in notificationsCtrl.notifications">{{notification.text}}</li>
         </ul>
 
-        <button class="button button-assertive button-full" style="margin-top: 20px;" ng-click="notificationsCtrl.removeNotifications()">Meldungen löschen</button>
+        <button class="button button-assertive button-full" style="margin-top: 20px;"
+                ng-click="notificationsCtrl.removeNotifications()">Meldungen löschen
+        </button>
+
+        <div>
+            <input type="text" ng-model="notificationsCtrl.passphrase"/>
+            <button class="button button-full" ng-click="notificationsCtrl.store()">store</button>
+            <button class="button button-full" ng-click="notificationsCtrl.retrieve()">retrieve</button>
+        </div>
+
+
     </ion-content>
 
 

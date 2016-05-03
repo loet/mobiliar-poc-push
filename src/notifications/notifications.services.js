@@ -49,6 +49,11 @@ angular.module('mobilliar-app.notifications.integrationservices', [])
                     //}, function (err) {
                     //    console.error('could not set badge, ' + err);
                     //});
+                    $cordovaBadge.set(NotificationStore.getNotifications().length).then(function() {
+                        // You have permission, badge set.
+                    }, function(err) {
+                        // You do not have permission.
+                    });
 
                 },
                 "pluginConfig": {

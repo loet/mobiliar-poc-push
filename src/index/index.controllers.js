@@ -12,6 +12,10 @@ angular.module('mobiliar-app.index.controllers', [])
             NavigationService.navigate('/notifications');
         };
 
+        ctrl.touch = function() {
+
+        };
+
     })
 
 
